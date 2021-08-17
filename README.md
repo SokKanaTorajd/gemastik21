@@ -19,4 +19,5 @@ https://github.com/nasalsabila/kamus-alay
 - <a href="https://github.com/SokKanaTorajd">Wijatama</a>
 - <a href="https://github.com/disaster007">Hasan</a>
 - <a href="https://github.com/akhzz">Faizal</a>
+guided by: <a href="https://github.com/kalijaga-ad">Bpk. Rifqi Ma'arif</a>
 
