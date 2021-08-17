@@ -16,8 +16,9 @@ You can visit her repo here
 https://github.com/nasalsabila/kamus-alay
 
 # Team Member
+guided by: <a href="https://github.com/kalijaga-ad">Bpk. Rifqi Ma'arif</a> <br>
 - <a href="https://github.com/SokKanaTorajd">Wijatama</a>
 - <a href="https://github.com/disaster007">Hasan</a>
 - <a href="https://github.com/akhzz">Faizal</a>
-guided by: <a href="https://github.com/kalijaga-ad">Bpk. Rifqi Ma'arif</a>
+
 
