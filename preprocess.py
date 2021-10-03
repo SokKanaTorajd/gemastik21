@@ -33,30 +33,22 @@ def addSastrawiStopword(stopwordList:list):
   stopping = StopWordRemover(dictionary)
   return stopping
 
-# def convertText(text:str):
-#   # text = ast.literal_eval(text)
-#   text = ' '.join(text)
-#   text = ''.join(text.split())
-#   return text
-
-def normalizeText(slang_word, text:str):
-  word_split = text.split()
-  for i, word in enumerate(word_split):
-    if word in slang_word.keys():
-      word_split[i] = slang_word[word]
-  return ' '.join(word_split)
-
 nlp = Lemmatizer()
-def lemmatizing(text:str):
-  return nlp.lemmatize(text)
-
-def sastrawiStopwordRemove(sastrawi, text:str):
-  return sastrawi.remove(text)
-
-def wordTokenize(text:str, stopwordList):
-  word_token = text.split()
-  word_token = [word for word in word_token if word not in stopwordList]
-  return ''.join(word_token)
+def callingFunction(text:str, slang_words=None, sastrawi_stopwords=None, stopword=None, lemmatize = False):
+  texts = re.sub('[^\w\s]', ' ', str(text).lower().strip())
+  texts = texts.split()
+  if lemmatize == True:
+    texts = [nlp.lemmatize(txt) for txt in texts]
+  if slang_words is not None:
+    for i, word in enumerate(texts):
+      if word in slang_words.keys():
+        texts[i] = slang_words[word]
+  if sastrawi_stopwords is not None:
+    texts = [sastrawi_stopwords.remove(txt) for txt in texts]
+  if stopword is not None:
+    texts = [word for word in texts if word not in stopword]
+  return ' '.join(texts)
+  
 
 
 extra_stopwords = ['ayo', 'dan', 'yg', 'ini', 'dengan', 'to','ya', 'yes', 'sih'
